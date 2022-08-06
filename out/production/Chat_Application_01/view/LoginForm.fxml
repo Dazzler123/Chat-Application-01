@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="525.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="525.0" fitWidth="858.0" opacity="0.61" pickOnBounds="true">
+         <image>
+            <Image url="@assets/HD-wallpaper-playerunknown-s-battlegrounds-pubg-2019-game-ultra-games-other-games-game-battle-battleground-videogame-pubg.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="362.0" layoutY="30.0" prefHeight="57.0" prefWidth="201.0" text="Play Tech " textFill="#ab2b2b">
+         <font>
+            <Font name="Berlin Sans FB" size="46.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="242.0" fitWidth="248.0" layoutX="308.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icon/people.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="57.0" fitWidth="64.0" layoutX="298.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icon/831689.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtUsername" focusColor="#ab2b2b" labelFloat="true" layoutX="177.0" layoutY="363.0" prefHeight="57.0" prefWidth="504.0" promptText="Enter Username">
+         <font>
+            <Font name="Berlin Sans FB" size="25.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="324.0" layoutY="453.0" onAction="#btnLogin" prefHeight="47.0" prefWidth="210.0" style="-fx-background-color: green; -fx-background-radius: 50;" text="Login">
+         <font>
+            <Font name="Berlin Sans FB" size="25.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
