@@ -9,9 +9,15 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class ClientFormController {
+
+    static String username;
     public Label lblUsername;
     public TextArea txtMsgArea;
     public TextField txtTypeMessage;
+
+    public void initialize(){
+        lblUsername.setText(username);
+    }
 
     public void btnLogout(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();

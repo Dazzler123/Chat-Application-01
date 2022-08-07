@@ -1,11 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientFormController">
+<AnchorPane prefHeight="666.0" prefWidth="392.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientFormController">
    <children>
-      <JFXButton buttonType="RAISED" layoutX="454.0" layoutY="314.0" onAction="#btnLogout" style="-fx-background-color: red;" text="Log out" />
+      <ImageView fitHeight="601.0" fitWidth="442.0" layoutY="65.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/dark-abstract-gaming-color-5k-wallpaper-11625792127spo6ievzi6.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="14.0" layoutY="68.0" prefHeight="526.0" prefWidth="412.0">
+         <children>
+            <TextArea fx:id="txtMsgArea" prefHeight="526.0" prefWidth="412.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </TextArea>
+         </children>
+      </Pane>
+      <TextField fx:id="txtTypeMessage" layoutX="57.0" layoutY="606.0" prefHeight="46.0" prefWidth="313.0" promptText="Type your message here...">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="72.0" fitWidth="72.0" layoutX="370.0" layoutY="592.0" onMouseClicked="#sendMessageIcon" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icon/md_5b29c1e7b8dd3-removebg-preview.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="18.0" layoutY="613.0" onMouseClicked="#emojiIcon" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icon/Twemoji_1f600.svg.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="328.0" layoutY="617.0" onMouseClicked="#cameraIcon" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icon/logo-camera-icon-png-favpng-tDX58dg37GLsKks51p3SCzeq0.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="354.0" layoutY="14.0" onAction="#btnLogout" style="-fx-background-color: red;" text="Log out">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="46.0" fitWidth="72.0" layoutX="11.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icon/dd0wvqu-eb1d5086-1903-4fbb-9873-59d9e81df530-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblUsername" layoutX="66.0" layoutY="12.0" prefHeight="46.0" prefWidth="268.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

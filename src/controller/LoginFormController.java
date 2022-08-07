@@ -12,9 +12,13 @@ public class LoginFormController {
     public JFXTextField txtUsername;
 
     public void btnLogin(ActionEvent actionEvent) throws IOException {
+        //set username label
+        ClientFormController.username = txtUsername.getText();
+
+        //load client ui
         Stage stage = new Stage();
         stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/ClientForm.fxml"))));
-        stage.setTitle(txtUsername.getText());
+        stage.setTitle(txtUsername.getText() + " - Group Member");
 //        stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
     }
