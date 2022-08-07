@@ -8,6 +8,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+import java.io.*;
+import java.net.Socket;
+
 public class ClientFormController {
 
     static String username;
@@ -15,8 +18,34 @@ public class ClientFormController {
     public TextArea txtMsgArea;
     public TextField txtTypeMessage;
 
+//    final int PORT = 5000;
+//    Socket socket;
+//    DataInputStream dataInputStream;
+//    DataOutputStream dataOutputStream;
+
+//    String message = "";
+
     public void initialize(){
+        //set username
         lblUsername.setText(username);
+
+//        new Thread(() -> {
+//            try {
+//                socket = new Socket("localhost", PORT);
+//
+//                dataOutputStream = new DataOutputStream(socket.getOutputStream());
+//                dataInputStream = new DataInputStream(socket.getInputStream());
+//
+//                while (!message.equals("exit")) {
+//                    message = dataInputStream.readUTF();
+//                    txtMsgArea.appendText("\nServer : " + message);
+//                }
+//
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }).start();
+
     }
 
     public void btnLogout(ActionEvent actionEvent) {
@@ -24,7 +53,9 @@ public class ClientFormController {
         stage.close();
     }
 
-    public void sendMessageIcon(MouseEvent mouseEvent) {
+    public void sendMessageIcon(MouseEvent mouseEvent) throws IOException {
+//        dataOutputStream.writeUTF(txtTypeMessage.getText().trim());
+//        dataOutputStream.flush();
     }
 
     public void emojiIcon(MouseEvent mouseEvent) {
