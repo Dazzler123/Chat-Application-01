@@ -72,6 +72,20 @@ public class ClientFormController {
     public void sendMessageIcon(MouseEvent mouseEvent) throws IOException {
 //        dataOutputStream.writeUTF(txtTypeMessage.getText().trim());
 //        dataOutputStream.flush();
+        try {
+            bufferedWriter.write(usrname);
+            bufferedWriter.newLine();
+            bufferedWriter.flush();
+
+            while (socket.isConnected()){
+                String typedMessage = txtTypeMessage.getText().trim();
+                bufferedWriter.write(username + ": " + typedMessage);
+                bufferedWriter.newLine();
+                bufferedWriter.flush();
+            }
+        } catch (IOException e){
+            closeEverything(socket, bufferedReader, bufferedWriter);
+        }
     }
 
     public void emojiIcon(MouseEvent mouseEvent) {
