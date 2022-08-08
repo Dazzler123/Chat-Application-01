@@ -88,6 +88,28 @@ public class ClientFormController {
         }
     }
 
+    private void listenForMessage(){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String otherMessages;
+
+                while (socket.isConnected()) {
+                    try {
+                        otherMessages = bufferedReader.readLine();
+                        txtMsgArea.appendText(otherMessages);
+                    } catch (IOException e){
+                        closeEverything(socket, bufferedReader, bufferedWriter);
+                    }
+                }
+            }
+        }).start();
+    }
+
+    private void closeEverything(Socket socket, BufferedReader bufferedReader, BufferedWriter bufferedWriter){
+
+    }
+
     public void emojiIcon(MouseEvent mouseEvent) {
     }
 
