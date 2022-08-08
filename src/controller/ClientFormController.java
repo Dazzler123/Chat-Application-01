@@ -18,12 +18,28 @@ public class ClientFormController {
     public TextArea txtMsgArea;
     public TextField txtTypeMessage;
 
+    private Socket socket;
+    private BufferedReader bufferedReader;
+    private BufferedWriter bufferedWriter;
+    private String usrname;
+
 //    final int PORT = 5000;
 //    Socket socket;
 //    DataInputStream dataInputStream;
 //    DataOutputStream dataOutputStream;
 
 //    String message = "";
+
+    public ClientFormController(Socket socket, String usrname){
+        try {
+            this.socket = socket;
+            this.bufferedWriter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+            this.bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            this.usrname = usrname;
+        } catch (IOException e){
+            closeEverything(socket, bufferedReader, bufferedWriter);
+        }
+    }
 
     public void initialize(){
         //set username
