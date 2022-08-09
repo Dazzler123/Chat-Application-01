@@ -80,11 +80,20 @@ public class Server {
                 while (!message.equals("exit")) {
                     message = dataInputStreamTwo.readUTF();
                     System.out.println("Client 2 : " + message);
+
+                    //send message to other clients
+                    dataOutputStreamOne.writeUTF("Peter : " + message);
+                    dataOutputStreamThree.writeUTF("Peter : " + message);
                 }
 
                 //alert
                 if(message.equals("exit")){
                     System.out.println("Client 2 left the chat");
+
+                    //notify other clients
+                    dataOutputStreamTwo.writeUTF("Peter left the chat");
+                    dataOutputStreamThree.writeUTF("Peter left the chat");
+
                     //close connections
                     serverSocket.close();
                     accept.close();
