@@ -55,7 +55,7 @@ public class Server {
                     dataOutputStreamThree.writeUTF("Dazzler left the chat");
 
                     //close connections
-                    closeConnection(serverSocket, accept);
+//                    closeConnection(serverSocket, accept);
                 }
 
             } catch (IOException e) {
@@ -94,7 +94,7 @@ public class Server {
                     dataOutputStreamThree.writeUTF("Peter left the chat");
 
                     //close connections
-                    closeConnection(serverSocket, accept);
+//                    closeConnection(serverSocket, accept);
                 }
 
             } catch (IOException e) {
@@ -133,7 +133,7 @@ public class Server {
                     dataOutputStreamTwo.writeUTF("Marky left the chat");
 
                     //close connection
-                    closeConnection(serverSocket, accept);
+//                    closeConnection(serverSocket, accept);
                 }
 
             } catch (IOException e) {
