@@ -1,5 +1,6 @@
 package controller;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
@@ -21,6 +22,7 @@ public class ClientForm3Controller {
     public Label lblUsername;
 
     final int PORT = 1230;
+    public static JFXButton logout;
     Socket socket;
     DataInputStream dataInputStream;
     DataOutputStream dataOutputStream;

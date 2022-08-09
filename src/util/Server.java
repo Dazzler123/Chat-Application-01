@@ -74,7 +74,6 @@ public class Server {
                     System.out.println("Client 3 : " + message);
                 }
 
-
             } catch (IOException e) {
                 e.printStackTrace();
             }

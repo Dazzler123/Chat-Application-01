@@ -56,7 +56,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <JFXButton buttonType="RAISED" layoutX="354.0" layoutY="14.0" onAction="#btnLogout" style="-fx-background-color: red;" text="Log out">
+      <JFXButton fx:id="logout" buttonType="RAISED" layoutX="354.0" layoutY="14.0" onAction="#btnLogout" style="-fx-background-color: red;" text="Log out">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
