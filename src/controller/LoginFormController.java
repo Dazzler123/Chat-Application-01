@@ -16,7 +16,7 @@ public class LoginFormController {
         if (txtUsername.getText().equals("Dazzler")) {
             //load client ui
             Stage stage = new Stage();
-            stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/ClientForm.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/ClientForm1.fxml"))));
             stage.setTitle(txtUsername.getText() + " - Group Member");
 //        stage.initStyle(StageStyle.UNDECORATED);
             stage.show();

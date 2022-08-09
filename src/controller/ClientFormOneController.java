@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import java.io.*;
 import java.net.Socket;
 
-public class ClientFormController {
+public class ClientFormOneController {
     public Label lblUsername;
     public TextArea txtMsgArea;
     public TextField txtTypeMessage;
