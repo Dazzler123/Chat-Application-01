@@ -17,9 +17,13 @@ public class Server {
     static DataInputStream dataInputStreamThree;
 
 
-    private static void closeConnection(ServerSocket serverSocket, Socket accept) throws IOException {
+    private static void closeConnection(DataOutputStream outputStream, DataInputStream inputStream, Socket socket, ServerSocket serverSocket) throws IOException {
+        //close streams
+        outputStream.close();
+        inputStream.close();
+
+        socket.close();
         serverSocket.close();
-        accept.close();
     }
 
     public static void main(String[] args) throws IOException {
@@ -55,7 +59,7 @@ public class Server {
                     dataOutputStreamThree.writeUTF("Dazzler left the chat");
 
                     //close connections
-//                    closeConnection(serverSocket, accept);
+//                    closeConnection(dataOutputStreamOne, dataInputStreamOne, accept, serverSocket);
                 }
 
             } catch (IOException e) {
@@ -94,7 +98,7 @@ public class Server {
                     dataOutputStreamThree.writeUTF("Peter left the chat");
 
                     //close connections
-//                    closeConnection(serverSocket, accept);
+//                    closeConnection(dataOutputStreamTwo, dataInputStreamTwo, accept, serverSocket);
                 }
 
             } catch (IOException e) {
@@ -133,7 +137,7 @@ public class Server {
                     dataOutputStreamTwo.writeUTF("Marky left the chat");
 
                     //close connection
-//                    closeConnection(serverSocket, accept);
+//                    closeConnection(dataOutputStreamThree, dataInputStreamThree, accept, serverSocket);
                 }
 
             } catch (IOException e) {
