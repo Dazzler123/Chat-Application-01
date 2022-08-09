@@ -11,7 +11,7 @@ public class Server {
     public static void main(String[] args) throws IOException {
         System.out.println("Server Started..");
 
-    //============================CLIENT 1====================================
+        //============================CLIENT 1====================================
         new Thread(() -> {
             String message = "";
 
@@ -23,8 +23,10 @@ public class Server {
                 DataInputStream dataInputStream = new DataInputStream(accept.getInputStream());
 
                 //read message & print
-                message = dataInputStream.readUTF();
-                System.out.println("Client 1 : " + message);
+                while (!message.equals("exit")) {
+                    message = dataInputStream.readUTF();
+                    System.out.println("Client 1 : " + message);
+                }
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -32,7 +34,7 @@ public class Server {
         }).start();
 
 
-    //============================CLIENT 2====================================
+        //============================CLIENT 2====================================
         new Thread(() -> {
             String message = "";
 
@@ -44,8 +46,10 @@ public class Server {
                 DataInputStream dataInputStream = new DataInputStream(accept.getInputStream());
 
                 //read message & print
-                message = dataInputStream.readUTF();
-                System.out.println("Client 2 : " + message);
+                while (!message.equals("exit")) {
+                    message = dataInputStream.readUTF();
+                    System.out.println("Client 2 : " + message);
+                }
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -53,7 +57,7 @@ public class Server {
         }).start();
 
 
-    //============================CLIENT 3====================================
+        //============================CLIENT 3====================================
         new Thread(() -> {
             String message = "";
 
@@ -65,8 +69,11 @@ public class Server {
                 DataInputStream dataInputStream = new DataInputStream(accept.getInputStream());
 
                 //read message & print
-                message = dataInputStream.readUTF();
-                System.out.println("\nClient 3 : " + message);
+                while (!message.equals("exit")) {
+                    message = dataInputStream.readUTF();
+                    System.out.println("Client 3 : " + message);
+                }
+
 
             } catch (IOException e) {
                 e.printStackTrace();
