@@ -15,7 +15,6 @@ import java.io.IOException;
 import java.net.Socket;
 
 public class ClientForm2Controller {
-    static String username;
     public TextArea txtMsgArea;
     public TextField txtTypeMessage;
     public ImageView sendMessageIcon;
@@ -29,8 +28,6 @@ public class ClientForm2Controller {
     String message = "";
 
     public void initialize() {
-        //set username
-        lblUsername.setText(username);
 
         new Thread(() -> {
             try {
