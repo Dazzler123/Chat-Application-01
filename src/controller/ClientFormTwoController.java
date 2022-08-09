@@ -14,7 +14,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 
-public class ClientForm2Controller {
+public class ClientFormTwoController {
     public TextArea txtMsgArea;
     public TextField txtTypeMessage;
     public ImageView sendMessageIcon;
