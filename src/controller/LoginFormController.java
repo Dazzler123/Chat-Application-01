@@ -12,14 +12,28 @@ public class LoginFormController {
     public JFXTextField txtUsername;
 
     public void btnLogin(ActionEvent actionEvent) throws IOException {
-        //set username label
-        ClientFormController.username = txtUsername.getText();
+        //load client 1
+        if (txtUsername.getText().equals("Dasindu")) {
+            //set username label
+            ClientFormController.username = txtUsername.getText();
 
-        //load client ui
-        Stage stage = new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/ClientForm.fxml"))));
-        stage.setTitle(txtUsername.getText() + " - Group Member");
+            //load client ui
+            Stage stage = new Stage();
+            stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/ClientForm.fxml"))));
+            stage.setTitle(txtUsername.getText() + " - Group Member");
 //        stage.initStyle(StageStyle.UNDECORATED);
-        stage.show();
+            stage.show();
+        }
+
+
+        //load client 2
+        if (txtUsername.getText().equals("Peter")) {
+            //load client ui
+            Stage stage = new Stage();
+            stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/ClientForm2.fxml"))));
+            stage.setTitle(txtUsername.getText() + " - Group Member");
+            stage.show();
+        }
+
     }
 }
