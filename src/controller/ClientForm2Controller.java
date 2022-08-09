@@ -44,7 +44,9 @@ public class ClientForm2Controller {
         }).start();
     }
 
-    public void sendMessageIcon(MouseEvent mouseEvent) {
+    public void sendMessageIcon(MouseEvent mouseEvent) throws IOException {
+        dataOutputStream.writeUTF(txtTypeMessage.getText().trim());
+        dataOutputStream.flush();
     }
 
     public void emojiIcon(MouseEvent mouseEvent) {
