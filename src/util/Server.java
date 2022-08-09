@@ -7,11 +7,6 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Server {
-
-    String messageToClient1;
-    String messageToClient2;
-    String messageToClient3;
-
     static DataOutputStream dataOutputStreamOne;
     static DataInputStream dataInputStreamOne;
 
@@ -91,7 +86,7 @@ public class Server {
                     System.out.println("Client 2 left the chat");
 
                     //notify other clients
-                    dataOutputStreamTwo.writeUTF("Peter left the chat");
+                    dataOutputStreamOne.writeUTF("Peter left the chat");
                     dataOutputStreamThree.writeUTF("Peter left the chat");
 
                     //close connections
