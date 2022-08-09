@@ -12,7 +12,6 @@ import java.io.*;
 import java.net.Socket;
 
 public class ClientFormController {
-    static String username;
     public Label lblUsername;
     public TextArea txtMsgArea;
     public TextField txtTypeMessage;
@@ -25,8 +24,6 @@ public class ClientFormController {
     String message = "";
 
     public void initialize(){
-        //set username
-        lblUsername.setText(username);
 
         new Thread(() -> {
             try {
