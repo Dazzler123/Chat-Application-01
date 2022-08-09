@@ -42,7 +42,8 @@ public class Server {
                     System.out.println("Client 1 : " + message);
 
                     //send message to other clients
-                    dataOutputStreamOne.writeUTF(message);
+                    dataOutputStreamTwo.writeUTF("Dazzler : " + message);
+//                    dataOutputStreamThree.writeUTF("Dazzler : " + message);
                 }
 
                 //alert
