@@ -35,10 +35,10 @@ public class Server {
 
             try {
                 ServerSocket serverSocket = new ServerSocket(1232);
-                Socket accept = serverSocket.accept();
+                Socket socket = serverSocket.accept();
                 System.out.println("Client 1 Connected.");
-                dataOutputStreamOne = new DataOutputStream(accept.getOutputStream());
-                dataInputStreamOne = new DataInputStream(accept.getInputStream());
+                dataOutputStreamOne = new DataOutputStream(socket.getOutputStream());
+                dataInputStreamOne = new DataInputStream(socket.getInputStream());
 
                 //read message & print
                 while (!message.equals("exit")) {
@@ -59,7 +59,7 @@ public class Server {
                     dataOutputStreamThree.writeUTF("Dazzler left the chat");
 
                     //close connections
-//                    closeConnection(dataOutputStreamOne, dataInputStreamOne, accept, serverSocket);
+//                    closeConnection(dataOutputStreamOne, dataInputStreamOne, socket, serverSocket);
                 }
 
             } catch (IOException e) {
@@ -74,10 +74,10 @@ public class Server {
 
             try {
                 ServerSocket serverSocket = new ServerSocket(1231);
-                Socket accept = serverSocket.accept();
+                Socket socket = serverSocket.accept();
                 System.out.println("Client 2 Connected.");
-                dataOutputStreamTwo = new DataOutputStream(accept.getOutputStream());
-                dataInputStreamTwo = new DataInputStream(accept.getInputStream());
+                dataOutputStreamTwo = new DataOutputStream(socket.getOutputStream());
+                dataInputStreamTwo = new DataInputStream(socket.getInputStream());
 
                 //read message & print
                 while (!message.equals("exit")) {
@@ -98,7 +98,7 @@ public class Server {
                     dataOutputStreamThree.writeUTF("Peter left the chat");
 
                     //close connections
-//                    closeConnection(dataOutputStreamTwo, dataInputStreamTwo, accept, serverSocket);
+//                    closeConnection(dataOutputStreamTwo, dataInputStreamTwo, socket, serverSocket);
                 }
 
             } catch (IOException e) {
@@ -113,10 +113,10 @@ public class Server {
 
             try {
                 ServerSocket serverSocket = new ServerSocket(1230);
-                Socket accept = serverSocket.accept();
+                Socket socket = serverSocket.accept();
                 System.out.println("Client 3 Connected.");
-                dataOutputStreamThree = new DataOutputStream(accept.getOutputStream());
-                dataInputStreamThree = new DataInputStream(accept.getInputStream());
+                dataOutputStreamThree = new DataOutputStream(socket.getOutputStream());
+                dataInputStreamThree = new DataInputStream(socket.getInputStream());
 
                 //read message & print
                 while (!message.equals("exit")) {
@@ -137,7 +137,7 @@ public class Server {
                     dataOutputStreamTwo.writeUTF("Marky left the chat");
 
                     //close connection
-//                    closeConnection(dataOutputStreamThree, dataInputStreamThree, accept, serverSocket);
+//                    closeConnection(dataOutputStreamThree, dataInputStreamThree, socket, serverSocket);
                 }
 
             } catch (IOException e) {
