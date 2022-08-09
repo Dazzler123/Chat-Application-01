@@ -15,7 +15,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 
-public class ClientForm3Controller {
+public class ClientFormThreeController {
     public TextArea txtMsgArea;
     public TextField txtTypeMessage;
     public ImageView sendMessageIcon;
