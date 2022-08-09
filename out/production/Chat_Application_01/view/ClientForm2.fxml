@@ -66,7 +66,7 @@
             <Image url="@assets/icon/dd0wvqu-eb1d5086-1903-4fbb-9873-59d9e81df530-removebg-preview.png" />
          </image>
       </ImageView>
-      <Label fx:id="lblUsername" layoutX="66.0" layoutY="12.0" prefHeight="46.0" prefWidth="268.0" textFill="WHITE">
+      <Label fx:id="lblUsername" layoutX="66.0" layoutY="12.0" prefHeight="46.0" prefWidth="268.0" text="Peter Perera" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
