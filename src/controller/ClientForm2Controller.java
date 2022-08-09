@@ -48,8 +48,17 @@ public class ClientForm2Controller {
     }
 
     public void sendMessageIcon(MouseEvent mouseEvent) throws IOException {
-        dataOutputStream.writeUTF(txtTypeMessage.getText().trim());
+        String typedMessage = txtTypeMessage.getText().trim();
+
+        //send message
+        dataOutputStream.writeUTF(typedMessage);
         dataOutputStream.flush();
+
+        //show sent message
+        txtMsgArea.appendText("You : " + typedMessage+"\n");
+
+        //clear text
+        txtTypeMessage.clear();
     }
 
     public void emojiIcon(MouseEvent mouseEvent) {
