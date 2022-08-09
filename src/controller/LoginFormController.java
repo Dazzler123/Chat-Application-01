@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import util.UINavigation;
 
 import java.io.IOException;
 
@@ -15,11 +16,7 @@ public class LoginFormController {
         //load client 1
         if (txtUsername.getText().equals("Dazzler")) {
             //load client ui
-            Stage stage = new Stage();
-            stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/ClientForm1.fxml"))));
-            stage.setTitle(txtUsername.getText() + " - Group Member");
-//        stage.initStyle(StageStyle.UNDECORATED);
-            stage.show();
+            UINavigation.loadUI("ClientForm1", txtUsername.getText());
 
             //clear text
             txtUsername.clear();
@@ -29,10 +26,7 @@ public class LoginFormController {
         //load client 2
         if (txtUsername.getText().equals("Peter")) {
             //load client ui
-            Stage stage = new Stage();
-            stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/ClientForm2.fxml"))));
-            stage.setTitle(txtUsername.getText() + " - Group Member");
-            stage.show();
+            UINavigation.loadUI("ClientForm2", txtUsername.getText());
 
             //clear text
             txtUsername.clear();
@@ -41,11 +35,7 @@ public class LoginFormController {
         //load client 3
         if (txtUsername.getText().equals("Marky")) {
             //load client ui
-            Stage stage = new Stage();
-            stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/ClientForm3.fxml"))));
-            stage.setTitle(txtUsername.getText() + " - Group Member");
-//        stage.initStyle(StageStyle.UNDECORATED);
-            stage.show();
+            UINavigation.loadUI("ClientForm3", txtUsername.getText());
 
             //clear text
             txtUsername.clear();
