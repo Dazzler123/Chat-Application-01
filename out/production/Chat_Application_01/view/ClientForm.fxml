@@ -32,7 +32,7 @@
             <Font name="System Italic" size="15.0" />
          </font>
       </TextField>
-      <ImageView fitHeight="72.0" fitWidth="72.0" layoutX="370.0" layoutY="592.0" onMouseClicked="#sendMessageIcon" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="sendMessageIcon" fitHeight="72.0" fitWidth="72.0" layoutX="370.0" layoutY="592.0" onMouseClicked="#sendMessageIcon" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assets/icon/md_5b29c1e7b8dd3-removebg-preview.png" />
          </image>

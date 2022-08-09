@@ -88,7 +88,7 @@ public class ClientFormController {
         }
     }
 
-    private void listenForMessage(){
+    public void listenForMessage(){
         new Thread(new Runnable() {
             @Override
             public void run() {
