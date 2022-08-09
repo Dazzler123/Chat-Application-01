@@ -28,6 +28,10 @@ public class Server {
                     System.out.println("Client 1 : " + message);
                 }
 
+                if(message.equals("exit")){
+                    System.out.println("Client 1 left the chat");
+                }
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -51,6 +55,10 @@ public class Server {
                     System.out.println("Client 2 : " + message);
                 }
 
+                if(message.equals("exit")){
+                    System.out.println("Client 2 left the chat");
+                }
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -72,6 +80,12 @@ public class Server {
                 while (!message.equals("exit")) {
                     message = dataInputStream.readUTF();
                     System.out.println("Client 3 : " + message);
+                }
+
+                if(message.equals("exit")){
+                    System.out.println("Client 3 left the chat");
+//                    accept.close();
+//                    serverSocket.close();
                 }
 
             } catch (IOException e) {
