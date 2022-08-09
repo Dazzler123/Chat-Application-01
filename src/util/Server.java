@@ -107,7 +107,7 @@ public class Server {
             try {
                 ServerSocket serverSocket = new ServerSocket(1230);
                 Socket accept = serverSocket.accept();
-                System.out.println("Client 3 Connected");
+                System.out.println("Client 3 Connected.");
                 dataOutputStreamThree = new DataOutputStream(accept.getOutputStream());
                 dataInputStreamThree = new DataInputStream(accept.getInputStream());
 
