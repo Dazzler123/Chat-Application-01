@@ -14,9 +14,6 @@ public class LoginFormController {
     public void btnLogin(ActionEvent actionEvent) throws IOException {
         //load client 1
         if (txtUsername.getText().equals("Dasindu")) {
-            //set username label
-            ClientFormController.username = txtUsername.getText();
-
             //load client ui
             Stage stage = new Stage();
             stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/ClientForm.fxml"))));
