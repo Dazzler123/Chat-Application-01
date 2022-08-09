@@ -9,7 +9,7 @@ import java.net.Socket;
 public class Server {
 
     public static void main(String[] args) throws IOException {
-        System.out.println("Server Started..");
+        System.out.println("========= Server Started =========");
 
         //============================CLIENT 1====================================
         new Thread(() -> {
