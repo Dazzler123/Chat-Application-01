@@ -28,8 +28,12 @@ public class Server {
                     System.out.println("Client 1 : " + message);
                 }
 
+                //alert
                 if(message.equals("exit")){
                     System.out.println("Client 1 left the chat");
+                    //close connections
+                    serverSocket.close();
+                    accept.close();
                 }
 
             } catch (IOException e) {
@@ -55,8 +59,12 @@ public class Server {
                     System.out.println("Client 2 : " + message);
                 }
 
+                //alert
                 if(message.equals("exit")){
                     System.out.println("Client 2 left the chat");
+                    //close connections
+                    serverSocket.close();
+                    accept.close();
                 }
 
             } catch (IOException e) {
@@ -82,10 +90,12 @@ public class Server {
                     System.out.println("Client 3 : " + message);
                 }
 
+                //alert
                 if(message.equals("exit")){
                     System.out.println("Client 3 left the chat");
-//                    accept.close();
-//                    serverSocket.close();
+                    //close connection
+                    serverSocket.close();
+                    accept.close();
                 }
 
             } catch (IOException e) {
