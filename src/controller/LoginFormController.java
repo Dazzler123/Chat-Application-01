@@ -32,5 +32,15 @@ public class LoginFormController {
             stage.show();
         }
 
+        //load client 3
+        if (txtUsername.getText().equals("Marky")) {
+            //load client ui
+            Stage stage = new Stage();
+            stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/ClientForm3.fxml"))));
+            stage.setTitle(txtUsername.getText() + " - Group Member");
+//        stage.initStyle(StageStyle.UNDECORATED);
+            stage.show();
+        }
+
     }
 }
