@@ -20,6 +20,9 @@ public class LoginFormController {
             stage.setTitle(txtUsername.getText() + " - Group Member");
 //        stage.initStyle(StageStyle.UNDECORATED);
             stage.show();
+
+            //clear text
+            txtUsername.clear();
         }
 
 
@@ -30,6 +33,9 @@ public class LoginFormController {
             stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/ClientForm2.fxml"))));
             stage.setTitle(txtUsername.getText() + " - Group Member");
             stage.show();
+
+            //clear text
+            txtUsername.clear();
         }
 
         //load client 3
@@ -40,6 +46,9 @@ public class LoginFormController {
             stage.setTitle(txtUsername.getText() + " - Group Member");
 //        stage.initStyle(StageStyle.UNDECORATED);
             stage.show();
+
+            //clear text
+            txtUsername.clear();
         }
 
     }
