@@ -38,10 +38,11 @@ public class ClientFormThreeController {
                 dataOutputStream = new DataOutputStream(socket.getOutputStream());
                 dataInputStream = new DataInputStream(socket.getInputStream());
 
-//                while (!message.equals("exit")) {
-//                    message = dataInputStream.readUTF();
-//                    txtTextArea.appendText("\nServer : " + message);
-//                }
+                //get messages & print
+                while (!message.equals("exit")) {
+                    message = dataInputStream.readUTF();
+                    txtMsgArea.appendText(message + "\n");
+                }
 
             } catch (IOException e) {
                 e.printStackTrace();

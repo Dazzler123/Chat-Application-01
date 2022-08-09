@@ -43,12 +43,17 @@ public class Server {
 
                     //send message to other clients
                     dataOutputStreamTwo.writeUTF("Dazzler : " + message);
-//                    dataOutputStreamThree.writeUTF("Dazzler : " + message);
+                    dataOutputStreamThree.writeUTF("Dazzler : " + message);
                 }
 
                 //alert
                 if(message.equals("exit")){
                     System.out.println("Client 1 left the chat");
+
+                    //notify other clients
+                    dataOutputStreamTwo.writeUTF("Dazzler left the chat");
+                    dataOutputStreamThree.writeUTF("Dazzler left the chat");
+
                     //close connections
                     serverSocket.close();
                     accept.close();
