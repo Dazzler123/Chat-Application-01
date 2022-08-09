@@ -17,6 +17,11 @@ public class Server {
     static DataInputStream dataInputStreamThree;
 
 
+    private static void closeConnection(ServerSocket serverSocket, Socket accept) throws IOException {
+        serverSocket.close();
+        accept.close();
+    }
+
     public static void main(String[] args) throws IOException {
         System.out.println("========= Server Started =========");
 
@@ -42,7 +47,7 @@ public class Server {
                 }
 
                 //alert
-                if(message.equals("exit")){
+                if (message.equals("exit")) {
                     System.out.println("Client 1 left the chat");
 
                     //notify other clients
@@ -50,8 +55,7 @@ public class Server {
                     dataOutputStreamThree.writeUTF("Dazzler left the chat");
 
                     //close connections
-                    serverSocket.close();
-                    accept.close();
+                    closeConnection(serverSocket, accept);
                 }
 
             } catch (IOException e) {
@@ -82,7 +86,7 @@ public class Server {
                 }
 
                 //alert
-                if(message.equals("exit")){
+                if (message.equals("exit")) {
                     System.out.println("Client 2 left the chat");
 
                     //notify other clients
@@ -90,8 +94,7 @@ public class Server {
                     dataOutputStreamThree.writeUTF("Peter left the chat");
 
                     //close connections
-                    serverSocket.close();
-                    accept.close();
+                    closeConnection(serverSocket, accept);
                 }
 
             } catch (IOException e) {
@@ -122,7 +125,7 @@ public class Server {
                 }
 
                 //alert
-                if(message.equals("exit")){
+                if (message.equals("exit")) {
                     System.out.println("Client 3 left the chat");
 
                     //notify other clients
@@ -130,8 +133,7 @@ public class Server {
                     dataOutputStreamTwo.writeUTF("Marky left the chat");
 
                     //close connection
-                    serverSocket.close();
-                    accept.close();
+                    closeConnection(serverSocket, accept);
                 }
 
             } catch (IOException e) {
