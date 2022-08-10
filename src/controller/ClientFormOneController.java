@@ -7,6 +7,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -14,6 +15,7 @@ import java.io.*;
 import java.net.Socket;
 
 public class ClientFormOneController {
+    public AnchorPane anchorPane;
     public Label lblUsername;
     public TextArea txtMsgArea;
     public TextField txtTypeMessage;
@@ -72,12 +74,14 @@ public class ClientFormOneController {
 //        BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream);
 //
 //        ImageInput input1 = new ImageInput();
-//        Stage stage = (Stage) clientOne.getScene().getWindow();
-//
-//        FileChooser fileChooser = new FileChooser();
-//        fileChooser.setTitle("Select an image to send");
-//        File imageChoosed = fileChooser.showOpenDialog(stage);
-//
+
+        Stage stage = (Stage) anchorPane.getScene().getWindow();
+
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Select an image to send");
+        File imageChoosed = fileChooser.showOpenDialog(stage);
+
+
 //        String you = "You : ";
 //        ImageView imageView = new ImageView(imageChoosed);
 //        flow.getChildren().addAll(you, imageChoosed);
