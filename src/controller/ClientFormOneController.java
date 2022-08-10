@@ -5,16 +5,21 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.Socket;
 
 public class ClientFormOneController {
+    public AnchorPane clientOne;
     public Label lblUsername;
     public TextArea txtMsgArea;
     public TextField txtTypeMessage;
+    public ImageView sendMessageIcon;
 
     final int PORT = 1232;
     Socket socket;
@@ -22,6 +27,7 @@ public class ClientFormOneController {
     DataOutputStream dataOutputStream;
 
     String message = "";
+
 
     public void initialize(){
 
@@ -63,6 +69,17 @@ public class ClientFormOneController {
     }
 
     public void cameraIcon(MouseEvent mouseEvent) {
+//        ImageInput input = dataOutputStream.writeUTF();
+//        OutputStream outputStream = socket.getOutputStream();
+//        BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream);
+//
+//        ImageInput input1 = new ImageInput();
+
+        Stage stage = (Stage) clientOne.getScene().getWindow();
+
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Select an image to send");
+        fileChooser.showOpenDialog(stage);
     }
 
     public void btnLogout(ActionEvent actionEvent) {
