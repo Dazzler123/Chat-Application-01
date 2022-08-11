@@ -33,6 +33,8 @@ public class ClientFormTwoController {
     String message = "";
 
     public void initialize() {
+        //disable emoji tray at startup
+        emojisPane.setVisible(false);
 
         new Thread(() -> {
             try {
@@ -68,18 +70,24 @@ public class ClientFormTwoController {
     }
 
     public void emojiIcon(MouseEvent mouseEvent) {
+        //open emoji tray
+        emojisPane.setVisible(true);
     }
 
     public void smileyOne(MouseEvent mouseEvent) {
+        txtTypeMessage.appendText("\uD83D\uDE42");
     }
 
     public void smileyTwo(MouseEvent mouseEvent) {
+        txtTypeMessage.appendText("\uD83D\uDE03");
     }
 
     public void smileyThree(MouseEvent mouseEvent) {
+        txtTypeMessage.appendText("\uD83D\uDE05");
     }
 
     public void smileyFour(MouseEvent mouseEvent) {
+        txtTypeMessage.appendText("\uD83D\uDE04");
     }
 
     public void cameraIcon(MouseEvent mouseEvent) {
