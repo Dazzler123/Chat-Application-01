@@ -59,11 +59,6 @@ public class ClientFormOneController {
     }
 
     public void sendMessageIcon(MouseEvent mouseEvent) throws IOException {
-        //send message to server
-        sendMessage();
-    }
-
-    private void sendMessage() throws IOException {
         String typedMessage = txtTypeMessage.getText().trim();
 
         //send message
