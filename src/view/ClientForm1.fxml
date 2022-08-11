@@ -31,21 +31,33 @@
                      <image>
                         <Image url="@assets/icon/external-emoji-emoji-justicon-lineal-color-justicon-3.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                   <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="57.0" layoutY="14.0" onMouseClicked="#smileyTwo" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@assets/icon/external-emoji-emoji-justicon-lineal-color-justicon-2.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                   <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="100.0" layoutY="14.0" onMouseClicked="#smileyThree" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@assets/icon/external-emoji-emoji-justicon-lineal-color-justicon-4.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                   <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="143.0" layoutY="14.0" onMouseClicked="#smileyFour" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@assets/icon/external-emoji-birthday-party-tulpahn-outline-color-tulpahn.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                </children>
             </AnchorPane>
