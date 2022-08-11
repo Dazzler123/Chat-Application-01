@@ -35,6 +35,8 @@ public class ClientFormOneController {
 
 
     public void initialize() {
+        //disable emoji tray at startup
+        emojisPane.setVisible(false);
 
         new Thread(() -> {
             try {
@@ -71,6 +73,19 @@ public class ClientFormOneController {
     }
 
     public void emojiIcon(MouseEvent mouseEvent) {
+        emojisPane.setVisible(true);
+    }
+
+    public void smileyOne(MouseEvent mouseEvent) {
+    }
+
+    public void smileyTwo(MouseEvent mouseEvent) {
+    }
+
+    public void smileyThree(MouseEvent mouseEvent) {
+    }
+
+    public void smileyFour(MouseEvent mouseEvent) {
     }
 
     public void cameraIcon(MouseEvent mouseEvent) throws FileNotFoundException {
@@ -104,15 +119,4 @@ public class ClientFormOneController {
         stage.close();
     }
 
-    public void smileyOne(MouseEvent mouseEvent) {
-    }
-
-    public void smileyTwo(MouseEvent mouseEvent) {
-    }
-
-    public void smileyThree(MouseEvent mouseEvent) {
-    }
-
-    public void smileyFour(MouseEvent mouseEvent) {
-    }
 }
