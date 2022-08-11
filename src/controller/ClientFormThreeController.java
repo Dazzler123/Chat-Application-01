@@ -20,6 +20,7 @@ import java.net.Socket;
 
 public class ClientFormThreeController {
     public AnchorPane anchorPane;
+    public AnchorPane emojisPane;
     public TextArea txtMsgArea;
     public TextField txtTypeMessage;
     public ImageView sendMessageIcon;
@@ -71,6 +72,18 @@ public class ClientFormThreeController {
     public void emojiIcon(MouseEvent mouseEvent) {
     }
 
+    public void smileyOne(MouseEvent mouseEvent) {
+    }
+
+    public void smileyTwo(MouseEvent mouseEvent) {
+    }
+
+    public void smileyThree(MouseEvent mouseEvent) {
+    }
+
+    public void smileyFour(MouseEvent mouseEvent) {
+    }
+
     public void cameraIcon(MouseEvent mouseEvent) {
 //        ImageInput input = dataOutputStream.writeUTF();
 //        OutputStream outputStream = socket.getOutputStream();
@@ -94,4 +107,5 @@ public class ClientFormThreeController {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.close();
     }
+
 }
