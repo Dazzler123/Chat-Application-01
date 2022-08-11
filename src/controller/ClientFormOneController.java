@@ -82,15 +82,19 @@ public class ClientFormOneController {
     }
 
     public void smileyOne(MouseEvent mouseEvent) {
+        txtTypeMessage.appendText("\uD83D\uDE42");
     }
 
     public void smileyTwo(MouseEvent mouseEvent) {
+        txtTypeMessage.appendText("\uD83D\uDE03");
     }
 
     public void smileyThree(MouseEvent mouseEvent) {
+        txtTypeMessage.appendText("\uD83D\uDE05");
     }
 
     public void smileyFour(MouseEvent mouseEvent) {
+        txtTypeMessage.appendText("\uD83D\uDE04");
     }
 
     public void cameraIcon(MouseEvent mouseEvent) throws FileNotFoundException {
