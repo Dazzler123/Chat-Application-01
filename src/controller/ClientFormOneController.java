@@ -20,6 +20,7 @@ import java.net.Socket;
 
 public class ClientFormOneController {
     public AnchorPane anchorPane;
+    public AnchorPane emojisPane;
     public Label lblUsername;
     public TextArea txtMsgArea;
     public TextField txtTypeMessage;
@@ -101,5 +102,17 @@ public class ClientFormOneController {
     public void btnLogout(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.close();
+    }
+
+    public void smileyOne(MouseEvent mouseEvent) {
+    }
+
+    public void smileyTwo(MouseEvent mouseEvent) {
+    }
+
+    public void smileyThree(MouseEvent mouseEvent) {
+    }
+
+    public void smileyFour(MouseEvent mouseEvent) {
     }
 }
